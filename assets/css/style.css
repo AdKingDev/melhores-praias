@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2727279f;
+}
+
+.titulo {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #050505;
+}
+
+.autor {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.autor > a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.autor > a:hover {
+    text-decoration: underline;
+    color: rgb(0, 248, 248);
+    cursor: pointer;
+}
+
+.container {
+    box-shadow: 2px 2px 4px #111;
+    width: 90%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9; /* Define a proporção do container para 16:9 */
+    overflow: hidden; /* Esconde as partes das imagens que estão fora do container */
+    border-radius: 20px;
+}
+
+.carrossel > ul > li > h1,
+.carrossel > ul > li > h2 {
+    position: absolute;
+    -webkit-text-stroke: 1px #000000;
+    z-index: 1;
+}
+
+.carrossel > ul > li > h1 {
+    top: 10px;
+    right: 10px;
+    color: #00ccff8c;
+    font-size: 100px;
+}
+
+.carrossel > ul > li > h2 {
+    bottom: 50px;
+    left: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.carrossel > ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave para a movimentação das imagens */
+    transform: translateX(0); /* Posição inicial das imagens */
+}
+
+.carrossel > ul > li {
+    position: relative;
+    min-width: 100%;
+}
+
+.carrossel > ul > li > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o container sem distorção */
+    display: block;
+    z-index: 0;
+}
