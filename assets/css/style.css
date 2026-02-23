@@ -45,7 +45,7 @@ body {
 
 .autor > a:hover {
     text-decoration: underline;
-    color: rgb(0, 248, 248);
+    color: rgb(17, 0, 248);
     cursor: pointer;
 }
 
