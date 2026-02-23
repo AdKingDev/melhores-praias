@@ -11,13 +11,25 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #2727279f;
+    background: linear-gradient(135deg, #ffffff, #00e1ff);
 }
 
 .titulo {
     font-size: 50px;
     margin-bottom: 20px;
-    color: #050505;
+    letter-spacing: 2px;
+    color: #0d3b66;
+    text-align: center;
+}
+
+.titulo:after {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 4px;
+    background: #00b4d8;
+    margin: 10px auto 0;
+    border-radius: 10px;
 }
 
 .autor {
@@ -46,25 +58,47 @@ body {
     border-radius: 20px;
 }
 
+.carrossel {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.carrossel:hover {
+    transform: scale(1.02);
+}
+
 .carrossel > ul > li > h1,
 .carrossel > ul > li > h2 {
     position: absolute;
-    -webkit-text-stroke: 1px #000000;
-    z-index: 1;
 }
 
 .carrossel > ul > li > h1 {
-    top: 10px;
-    right: 10px;
-    color: #00ccff8c;
-    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    background: rgba(0, 180, 216, 0.445);
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 80px;
+    z-index: 3;
 }
 
 .carrossel > ul > li > h2 {
-    bottom: 50px;
-    left: 10px;
-    color: #fff;
+    bottom: 47px;
+    left: 0;
+    padding-left: 10px;
     font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: #ffffff;
+    z-index: 2;
 }
 
 .carrossel > ul {
